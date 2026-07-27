@@ -1,4 +1,4 @@
-@php $wa = preg_replace('/\D/', '', \App\Models\Setting::get('whatsapp_number', '628000000000')); @endphp
+@php $wa = preg_replace('/\D/', '', \App\Models\Setting::get('whatsapp_number', '6285761690400')); @endphp
 <a href="https://wa.me/{{ $wa }}?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20produk%20furniture"
    target="_blank" rel="noopener" aria-label="Hubungi kami via WhatsApp"
    class="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl shadow-green-600/30 transition hover:scale-105 active:scale-95">

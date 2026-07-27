@@ -35,7 +35,7 @@
                 <div class="glass-card p-8">
                     <h2 class="font-display font-semibold text-brown-800">Kontak Langsung</h2>
                     <p class="mt-2 text-sm text-brown-800/70">Hubungi kami langsung untuk respon lebih cepat.</p>
-                    <a href="https://wa.me/{{ preg_replace('/\D/', '', \App\Models\Setting::get('whatsapp_number', '628000000000')) }}" target="_blank" rel="noopener" class="btn-whatsapp mt-4 w-full">Chat WhatsApp</a>
+                    <a href="https://wa.me/{{ preg_replace('/\D/', '', \App\Models\Setting::get('whatsapp_number', '6285761690400')) }}" target="_blank" rel="noopener" class="btn-whatsapp mt-4 w-full">Chat WhatsApp</a>
                 </div>
 
                 @if($showrooms->isNotEmpty())

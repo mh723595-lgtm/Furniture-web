@@ -1,5 +1,5 @@
 @php
-    $waLink = $product->whatsapp_link ?: ('https://wa.me/' . preg_replace('/\D/', '', \App\Models\Setting::get('whatsapp_number', '628000000000')) . '?text=' . urlencode('Halo, saya tertarik dengan produk ' . $product->name));
+    $waLink = $product->whatsapp_link ?: ('https://wa.me/' . preg_replace('/\D/', '', \App\Models\Setting::get('whatsapp_number', '6285761690400')) . '?text=' . urlencode('Halo, saya tertarik dengan produk ' . $product->name));
 @endphp
 <x-layouts.app :title="$product->meta_title ?? $product->name" :description="$product->meta_description ?? \Illuminate\Support\Str::limit(strip_tags($product->description), 160)" :keywords="$product->meta_keywords" :image="$product->thumbnail">
 

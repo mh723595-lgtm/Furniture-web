@@ -23,7 +23,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m1.35-5.15a7 7 0 11-14 0 7 7 0 0114 0z"/>
             </svg>
         </a>
-        <a href="https://wa.me/{{ preg_replace('/\D/', '', \App\Models\Setting::get('whatsapp_number', '628000000000')) }}" target="_blank" rel="noopener"
+        <a href="https://wa.me/{{ preg_replace('/\D/', '', \App\Models\Setting::get('whatsapp_number', '6285761690400')) }}" target="_blank" rel="noopener"
            class="hidden btn-whatsapp !px-4 !py-2 text-sm sm:inline-flex">
             WhatsApp
         </a>
