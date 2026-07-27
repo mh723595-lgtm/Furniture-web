@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@source "../../resources/**/*.blade.php";
+@source "../../resources/**/*.js";
+@source "../../app/**/*.php";
+
 @theme {
     --color-cream-50: #fdfbf7;
     --color-cream-100: #faf6ed;
