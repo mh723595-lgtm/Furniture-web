@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@theme {
+    --color-cream-50: #fdfbf7;
+    --color-cream-100: #faf6ed;
+    --color-cream-200: #f3ead9;
+    --color-beige-100: #ede4d3;
+    --color-beige-200: #e0d3ba;
+    --color-wood-400: #b08968;
+    --color-wood-500: #9c6f4a;
+    --color-wood-600: #7c5738;
+    --color-olive-500: #6b7156;
+    --color-olive-600: #565b45;
+    --color-brown-700: #4a3728;
+    --color-brown-800: #362819;
+
+    --font-display: "Poppins", "Segoe UI", sans-serif;
+    --font-body: "Inter", "Segoe UI", sans-serif;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: var(--font-body);
+        background-color: var(--color-cream-50);
+        color: var(--color-brown-800);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-display);
+    }
+}
+
+@layer components {
+    .glass-card {
+        background: rgba(255, 255, 255, 0.55);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 1.5rem;
+        box-shadow: 0 8px 32px rgba(124, 87, 56, 0.08);
+    }
+
+    /* More transparent glass variant — used for the hero's right-side card
+       so the background image reads through more clearly. */
+    .glass-card-light {
+        background: rgba(255, 255, 255, 0.28);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        border-radius: 1.75rem;
+        box-shadow: 0 20px 50px rgba(124, 87, 56, 0.12);
+    }
+
+    .glass-nav {
+        background: rgba(253, 251, 247, 0.7);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(176, 137, 104, 0.15);
+    }
+
+    .btn-primary {
+        @apply inline-flex items-center justify-center gap-2 rounded-full bg-wood-500 px-6 py-3 font-semibold text-white shadow-lg shadow-wood-500/20 transition hover:bg-wood-600 hover:shadow-xl active:scale-95;
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center justify-center gap-2 rounded-full border border-wood-400/40 bg-white/60 px-6 py-3 font-semibold text-brown-800 backdrop-blur-md transition hover:bg-white/90 active:scale-95;
+    }
+
+    .btn-whatsapp {
+        @apply inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-3 font-semibold text-white shadow-lg shadow-green-500/20 transition hover:brightness-95 active:scale-95;
+    }
+
+    .section-title {
+        @apply font-display text-2xl font-bold text-brown-800 sm:text-3xl md:text-4xl;
+    }
+
+    .product-card {
+        background: rgba(255, 255, 255, 0.55);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 1.5rem;
+        box-shadow: 0 8px 32px rgba(124, 87, 56, 0.08);
+        overflow: hidden;
+
+        @apply transition duration-300 hover:-translate-y-1 hover:shadow-2xl;
+    }
+}
+
+@layer utilities {
+    /* Slow, continuous "Ken Burns" zoom for the hero background image. */
+    @keyframes hero-zoom-loop {
+        0%,
+        100% {
+            transform: scale(1.1);
+        }
+        50% {
+            transform: scale(1.22);
+        }
+    }
+    .animate-hero-zoom-loop {
+        animation: hero-zoom-loop 20s ease-in-out infinite;
+    }
+
+    /* Subtle in/out "breathing" animation applied to a few headline letters. */
+    @keyframes letter-breathe {
+        0%,
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        50% {
+            opacity: 0.25;
+            transform: translateY(-3px);
+        }
+    }
+    .letter-breathe {
+        display: inline-block;
+        animation: letter-breathe 2.8s ease-in-out infinite;
+    }
+
+    /* Small vertical hint animation for the hero's "scroll down" arrow. */
+    @keyframes float-hint {
+        0%,
+        100% {
+            transform: translateY(0);
+            opacity: 0.4;
+        }
+        50% {
+            transform: translateY(6px);
+            opacity: 0.8;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .animate-hero-zoom-loop,
+        .letter-breathe {
+            animation: none !important;
+        }
+    }
+}
