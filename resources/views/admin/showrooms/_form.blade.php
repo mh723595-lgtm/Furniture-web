@@ -30,7 +30,7 @@
 <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
     <div>
         <label class="text-sm font-medium text-brown-800">Nomor WhatsApp</label>
-        <input type="text" name="whatsapp_number" value="{{ old('whatsapp_number', $showroom->whatsapp_number ?? '') }}" placeholder="6281234567890" required class="mt-1 w-full rounded-xl border border-wood-400/20 bg-white/70 px-4 py-2.5 text-sm">
+        <input type="text" name="whatsapp_number" value="{{ old('whatsapp_number', $showroom->whatsapp_number ?? '') }}" placeholder="6285761690400" required class="mt-1 w-full rounded-xl border border-wood-400/20 bg-white/70 px-4 py-2.5 text-sm">
     </div>
     <div>
         <label class="text-sm font-medium text-brown-800">Nomor Telepon</label>

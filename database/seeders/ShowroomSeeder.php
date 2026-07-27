@@ -24,7 +24,7 @@ class ShowroomSeeder extends Seeder
                     'address' => "Jl. Furniture Raya No. 1, {$item['city']}",
                     'city' => $item['city'],
                     'province' => $item['province'],
-                    'whatsapp_number' => '6281234567890',
+                    'whatsapp_number' => '6285761690400',
                     'phone_number' => '021-1234567',
                     'operational_hours' => 'Senin - Minggu, 09.00 - 20.00',
                     'is_active' => true,
