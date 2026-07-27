@@ -270,7 +270,7 @@
         <div class="glass-card flex flex-col items-center gap-4 p-10 text-center">
             <h2 class="section-title">Butuh Rekomendasi Furniture?</h2>
             <p class="max-w-xl text-brown-800/70">Konsultasikan kebutuhan furniture rumah Anda secara gratis dengan tim kami melalui WhatsApp.</p>
-            <a href="https://wa.me/{{ preg_replace('/\D/', '', \App\Models\Setting::get('whatsapp_number', '628000000000')) }}" target="_blank" rel="noopener" class="btn-whatsapp">
+            <a href="https://wa.me/{{ preg_replace('/\D/', '', \App\Models\Setting::get('whatsapp_number', '6285761690400')) }}" target="_blank" rel="noopener" class="btn-whatsapp">
                 Chat via WhatsApp
             </a>
         </div>
